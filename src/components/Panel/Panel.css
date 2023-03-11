@@ -1,0 +1,16 @@
+.panel {
+  margin-left: 450px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: calc(100% - 450px);
+  height: calc(100% - 5%);
+}
+
+@media (max-width: 768px) {
+  .panel {
+    margin-left: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+  }
+}
