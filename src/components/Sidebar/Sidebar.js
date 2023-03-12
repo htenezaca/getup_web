@@ -4,13 +4,8 @@ import CustomDatePicker from "../DatePicker/DatePicker"; // importa el component
 
 function Sidebar() {
   return (
-    <div className="sidebar">
-      <div className="sidebar__header">
-        <i className="fas fa-times"></i>
-        <CustomDatePicker />
-      </div>
-
-          
+    <div className="sidebar container d-flex justify-content-center">
+        <CustomDatePicker />          
     </div>
   );
 }
