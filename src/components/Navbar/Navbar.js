@@ -1,22 +1,75 @@
-import React from 'react';
+import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light custom-nav-bar fixed-top">
+    <nav
+      className="navbar navbar-expand-lg navbar-light custom-nav-bar fixed-top"
+      style={{
+        backgroundColor: "#D9D9D9",
+        padding: "0",
+        margin: "0",
+        height: "60px",
+      }}
+    >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav me-auto">
+            <div
+              style={{
+                width: "45px",
+                height: "45px",
+                borderRadius: "50%",
+                backgroundColor: "black",
+              }}
+            ></div>
+          </div>
+          <div className="navbar-nav mx-auto">
+            <a
+              className="nav-link active hover-bg-custom"
+              aria-current="page"
+              href="#"
+              style={{ width: "150px", textAlign: "center" }}
+            >
+              Agenda
+            </a>
+            <a
+              className="nav-link hover-bg-custom"
+              href="#"
+              style={{ width: "150px", textAlign: "center" }}
+            >
+              Alarma
+            </a>
+            <a
+              className="nav-link hover-bg-custom"
+              href="#"
+              style={{ width: "150px", textAlign: "center" }}
+            >
+              Perfil
+            </a>
+          </div>
           <div className="navbar-nav ms-auto">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#">Features</a>
-            <a className="nav-link" href="#">Pricing</a>
-            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <button className="btn btn-primary">Iniciar sesión</button>
           </div>
         </div>
       </div>
+      <style>
+        {`
+        .hover-bg-custom:hover {
+          background-color: #C9C0E0;
+        }
+      `}
+      </style>
     </nav>
   );
 };
