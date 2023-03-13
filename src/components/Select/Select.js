@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import InfoIcon from "@material-ui/icons/Info";
 import Popover from "@material-ui/core/Popover";
@@ -32,10 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CustomTextField = ({
+const CustomSelect = ({
   label,
   value,
   onChange,
+  options,
   placeholder,
   helperText,
   infoText,
@@ -56,18 +60,35 @@ const CustomTextField = ({
 
   return (
     <React.Fragment>
-      <TextField
-        className={classes.root}
-        label={label}
+      <FormControl
         variant="outlined"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        style={{ height: "58px", width: "282px" }}
-      />
+        className={classes.root}
+        style={{ width: "280px" }} // <- añadir aquí la regla width
+      >
+        <Select
+          value={value}
+          onChange={onChange}
+          label={label}
+          InputLabelProps={{
+            shrink: false,
+          }}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </Select>
+        <InputLabel
+          margin="dense"
+          style={{
+            backgroundColor: "#fff",
+            paddingLeft: "8px",
+          }}
+        >
+          {label}
+        </InputLabel>
+      </FormControl>
       <IconButton onClick={handleInfoClick}>
         <InfoIcon />
       </IconButton>
@@ -93,4 +114,4 @@ const CustomTextField = ({
   );
 };
 
-export default CustomTextField;
+export default CustomSelect;

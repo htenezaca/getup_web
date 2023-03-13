@@ -32,6 +32,10 @@ const useStyles = makeStyles({
     margin: "auto",
     marginTop: "20px",
   },
+  info: {
+    display: "flex",
+    flexDirection: "column",
+  },
 });
 
 const PersonalCard = ({ name, email }) => {
@@ -39,23 +43,19 @@ const PersonalCard = ({ name, email }) => {
 
   return (
     <div className={`card ${classes.card}`}>
-      <div className="card-body d-flex align-items-center">
+      <div className={`card-body d-flex align-items-center ${classes.info}`}>
         <Avatar className={classes.avatar} />
         <div>
           <h2 className={classes.name}>{name}</h2>
-          <h6 className={classes.email}>{email}</h6>
+          <h3 className={classes.email}>{email}</h3>
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item" style={{ borderRadius: "28px" }}>
-            <div style={{ float: "bottom", width: "75%" }}>
-              <Button
-                content="Actualizar plan"
-                variant="primary"
-                className={classes.button}
-              />
-            </div>
-          </li>
-        </ul>
+        <div style={{ width: "75%" }}>
+          <Button
+            content="Actualizar plan"
+            variant="primary"
+            className={classes.button}
+          />
+        </div>
       </div>
     </div>
   );

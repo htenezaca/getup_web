@@ -59,7 +59,12 @@ const Navbar = () => {
             </a>
           </div>
           <div className="navbar-nav ms-auto">
-            <button className="btn btn-primary">Iniciar sesión</button>
+            <button
+              className="btn"
+              style={{ backgroundColor: "#6C5C9E", color: "#fff" }}
+            >
+              Iniciar sesión
+            </button>
           </div>
         </div>
       </div>

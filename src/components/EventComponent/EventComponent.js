@@ -1,4 +1,3 @@
-//create a React component
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Switch from "@mui/material/Switch";
@@ -10,9 +9,26 @@ const useStyles = makeStyles({
   margin: {
     marginLeft: "auto",
   },
+  container: {
+    width: "280px",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderRadius: "28px",
+    border: "1px solid #ccc",
+    height: "48px",
+    "&:hover": {
+      backgroundColor: "#BAA6ED",
+    },
+    "&:hover .MuiIconButton-root:not(:hover)": {
+      backgroundColor: "transparent",
+    },
+  },
 });
 
-const EventComponent = () => {
+const EventComponent = (props) => {
+  // Definir una prop llamada "text"
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -22,6 +38,7 @@ const EventComponent = () => {
           display: "flex",
           justifyContent: "space-between",
           width: "280px",
+          padding: "10px",
         }}
       >
         <div
@@ -37,7 +54,7 @@ const EventComponent = () => {
         >
           <div className="card-body">
             <div>
-              <h6>Cita de trabajo| 02 p.m.</h6>
+              <p>{props.text}</p> {/* Usar la prop "text" aquí */}
             </div>
           </div>
         </div>
