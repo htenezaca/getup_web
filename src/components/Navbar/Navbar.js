@@ -38,21 +38,21 @@ const Navbar = () => {
             <a
               className="nav-link active hover-bg-custom"
               aria-current="page"
-              href="#"
+              href="/agenda"
               style={{ width: "150px", textAlign: "center" }}
             >
               Agenda
             </a>
             <a
               className="nav-link hover-bg-custom"
-              href="#"
+              href="/alarma"
               style={{ width: "150px", textAlign: "center" }}
             >
               Alarma
             </a>
             <a
               className="nav-link hover-bg-custom"
-              href="#"
+              href="/perfil"
               style={{ width: "150px", textAlign: "center" }}
             >
               Perfil

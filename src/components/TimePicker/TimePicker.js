@@ -20,16 +20,15 @@ export default function CustomTimePicker() {
         renderInput={(params) => (
           <TextField
             {...params}
-            style={{ backgroundColor: "red" }}
             MuiPickersStaticWrapperProps={{
-              style: { backgroundColor: "#000000" },
+              style: { backgroundColor: "black" },
             }}
             MuiPickersClockPointerProps={{
-              style: { backgroundColor: "#ffffff" },
+              style: { backgroundColor: "black" },
             }}
-            MuiPickersClockNumberProps={{ style: { color: "614d9e" } }}
+            MuiPickersClockNumberProps={{ style: { color: "black" } }}
             MuiPickersClockPointerThumbProps={{
-              style: { backgroundColor: "#614d9e" },
+              style: { backgroundColor: "black" },
             }}
           />
         )}

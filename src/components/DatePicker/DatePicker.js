@@ -3,7 +3,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.css";
 
-
 function CustomDatePicker() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -33,7 +32,11 @@ function CustomDatePicker() {
           const popper = state.elements.popper;
           const reference = state.elements.reference;
 
-          popper.style.left = reference.offsetLeft + reference.offsetWidth / 2 - popper.offsetWidth / 2 + "px";
+          popper.style.left =
+            reference.offsetLeft +
+            reference.offsetWidth / 2 -
+            popper.offsetWidth / 2 +
+            "px";
         },
       },
     },
@@ -51,4 +54,4 @@ function CustomDatePicker() {
   );
 }
 
-export default CustomDatePicker
+export default CustomDatePicker;

@@ -1,4 +1,3 @@
-//create a React component
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Switch from "@mui/material/Switch";
@@ -13,7 +12,7 @@ const useStyles = makeStyles({
   },
 });
 
-const AlarmComponent = () => {
+const AlarmComponent = ({ title, repeat }) => {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -21,6 +20,7 @@ const AlarmComponent = () => {
         className="card custom-border"
         style={{
           width: "300px",
+          marginTop: "20px",
         }}
       >
         <div className="card-body">
@@ -45,7 +45,7 @@ const AlarmComponent = () => {
               margin: "right",
             }}
           >
-            <h5>Despertar</h5>
+            <h5>{title}</h5>
           </div>
           <div style={{ float: "right", width: "33%" }}>
             <div>
@@ -66,7 +66,7 @@ const AlarmComponent = () => {
                   width: "100%",
                 }}
               >
-                Todos los días
+                {repeat}
               </div>
             </div>
             <div style={{ float: "right", width: "25%" }}>

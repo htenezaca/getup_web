@@ -6,6 +6,7 @@ import CustomTextField from "../components/TextField/TextField";
 import CustomTimePicker from "../components/TimePicker/TimePicker";
 import Button from "../components/ShortButton/Button";
 import CustomSelect from "../components/Select/Select";
+import { Link } from "react-router-dom";
 
 const AgendaEditPage = () => {
   return (
@@ -25,8 +26,6 @@ const AgendaEditPage = () => {
         >
           <EventComponent text=" Cita trabajo 1 | 02:00pm" />
           <EventComponent text=" Cita trabajo 2 | 02:00pm" />
-          <EventComponent text=" Cita trabajo 3 | 02:00pm" />
-          <EventComponent text=" Cita trabajo 4 | 02:00pm" />
         </div>
       </div>
       <div style={{ flex: 1 }}>
@@ -45,7 +44,7 @@ const AgendaEditPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingBottom: "40px",
+            paddingBottom: "20px",
           }}
         >
           <CustomTextField
@@ -73,14 +72,14 @@ const AgendaEditPage = () => {
           }}
         >
           <CustomTextField
-            label={"label"}
-            placeholder={"placeholder"}
+            label={"Descripción"}
+            placeholder={"Es una reunión de trabajo"}
             helperText={"helpertext"}
           />
           <CustomTextField
-            label={"label"}
-            placeholder={"placeholder"}
-            helperText={"helpertext"}
+            label={"Invitados"}
+            placeholder={"user@email.com"}
+            helperText={"Ingresar los correos de los invitados"}
           />
         </div>
         <div
@@ -88,10 +87,26 @@ const AgendaEditPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            paddingBottom: "10px",
           }}
         >
-          <Button content={"Guardar"} variant={"primary"} />
+          <Link to={"/agenda"} style={{ marginRight: "10px" }}>
+            <Button
+              content={"Cancelar"}
+              variant={"secondary"}
+              style={{ maxWidth: "120px" }}
+            />
+          </Link>
+          <Link to={"/agenda"} style={{ marginLeft: "10px" }}>
+            <Button
+              content={"Guardar"}
+              variant={"primary"}
+              style={{ maxWidth: "120px" }}
+            />
+          </Link>
         </div>
+        <br />
+        <br />
       </div>
     </div>
   );

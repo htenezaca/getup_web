@@ -7,6 +7,7 @@ import CustomTimePicker from "../components/TimePicker/TimePicker";
 import Button from "../components/ShortButton/Button";
 import CustomSelect from "../components/Select/Select";
 import { Link } from "react-router-dom";
+import LargeButton from "../components/LargeButton/LargeButton";
 import AgendaEditPage from "./AgendaEditPage";
 
 const AgendaPage = () => {
@@ -27,8 +28,12 @@ const AgendaPage = () => {
         >
           <EventComponent text=" Cita trabajo 1 | 02:00pm" />
           <EventComponent text=" Cita trabajo 2 | 02:00pm" />
-          <EventComponent text=" Cita trabajo 3 | 02:00pm" />
-          <EventComponent text=" Cita trabajo 4 | 02:00pm" />
+
+          <Link to={"/agenda/create"}>
+            <LargeButton content={"Agregar Evento"} variant={"primary"} />
+          </Link>
+          <br />
+          <br />
         </div>
       </div>
       <div style={{ flex: 1 }}>
@@ -47,7 +52,7 @@ const AgendaPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingBottom: "40px",
+            paddingBottom: "20px",
           }}
         >
           <CustomTextField
@@ -58,9 +63,9 @@ const AgendaPage = () => {
           <CustomSelect
             label="Etiqueta"
             options={[
-              { value: "option1", label: "Opción 1" },
-              { value: "option2", label: "Opción 2" },
-              { value: "option3", label: "Opción 3" },
+              { value: "Trabajo", label: "Trabajo" },
+              { value: "Ocio", label: "Ocio" },
+              { value: "Familia", label: "Familia" },
             ]}
             helperText="Selecciona una opción para continuar"
             infoText="Esta es la lista de opciones disponibles"
@@ -71,18 +76,18 @@ const AgendaPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingBottom: "20px",
+            paddingBottom: "10px",
           }}
         >
           <CustomTextField
-            label={"label"}
-            placeholder={"placeholder"}
-            helperText={"helpertext"}
+            label={"Descripción"}
+            placeholder={"Este es un evento de trabajo"}
+            helperText={"Descripción del evento"}
           />
           <CustomTextField
-            label={"label"}
-            placeholder={"placeholder"}
-            helperText={"helpertext"}
+            label={"Invitados"}
+            placeholder={"user@mail.com"}
+            helperText={"Ingrese los correos de los invitados"}
           />
         </div>
         <div
@@ -90,10 +95,15 @@ const AgendaPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            paddingBottom: "10px",
           }}
         >
-          <Link to={"/agenda/edit"}>
-            <Button content={"Editar"} variant={"primary"} />
+          <Link to={"/agenda/edit"} style={{ marginLeft: "10px" }}>
+            <Button
+              content={"Edit"}
+              variant={"primary"}
+              style={{ maxWidth: "120px" }}
+            />
           </Link>
         </div>
       </div>
