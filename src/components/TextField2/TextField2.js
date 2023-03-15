@@ -4,7 +4,6 @@ import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import InfoIcon from "@material-ui/icons/Info";
 import Popover from "@material-ui/core/Popover";
-import Toogle from "../Toogle/Toogle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,16 +29,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     maxWidth: 400,
   },
-  container: {
-    display: "flex",
-    alignItems: "center",
-  },
-  toogle: {
-    marginLeft: "16px",
-  },
 }));
 
-const SwitchComplement = ({
+const CustomTextField2 = ({
   label,
   value,
   onChange,
@@ -47,21 +39,9 @@ const SwitchComplement = ({
   infoText,
 }) => {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleInfoClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleInfoClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "info-popover" : undefined;
 
   return (
-    <div className={classes.container}>
+    <React.Fragment>
       <TextField
         className={classes.root}
         label={label}
@@ -74,30 +54,8 @@ const SwitchComplement = ({
         }}
         style={{ height: "58px", width: "282px" }}
       />
-      <IconButton onClick={handleInfoClick}>
-        <InfoIcon />
-      </IconButton>
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleInfoClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-      >
-        <div className={classes.popover}>
-          <p>{infoText}</p>
-        </div>
-      </Popover>
-      <Toogle className={classes.toogle} />
-    </div>
+    </React.Fragment>
   );
 };
 
-export default SwitchComplement;
+export default CustomTextField2;

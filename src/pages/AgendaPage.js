@@ -27,6 +27,7 @@ const AgendaPage = () => {
           }}
         >
           <EventComponent text=" Cita trabajo 1 | 02:00pm" />
+
           <EventComponent text=" Cita trabajo 2 | 02:00pm" />
 
           <Link to={"/agenda/create"}>

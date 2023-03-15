@@ -7,8 +7,6 @@ import CustomTimePicker from "../components/TimePicker/TimePicker";
 import Button from "../components/ShortButton/Button";
 import CustomSelect from "../components/Select/Select";
 import { Link } from "react-router-dom";
-import LargeButton from "../components/LargeButton/LargeButton";
-import AgendaEditPage from "./AgendaEditPage";
 
 const AgendaPage = () => {
   return (

@@ -73,12 +73,12 @@ const AgendaEditPage = () => {
         >
           <CustomTextField
             label={"Descripción"}
-            placeholder={"Es una reunión de trabajo"}
+            placeholder={"Este es un evento de trabajo"}
             helperText={"helpertext"}
           />
           <CustomTextField
             label={"Invitados"}
-            placeholder={"user@email.com"}
+            placeholder={"user@mail.com"}
             helperText={"Ingresar los correos de los invitados"}
           />
         </div>

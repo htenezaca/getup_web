@@ -11,6 +11,11 @@ import AgendaEditPage from "./pages/AgendaEditPage";
 import AgendaDeletePage from "./pages/AgendaDeletePage";
 import AgendaCreatePage from "./pages/AgendaCreatePage";
 import AlarmaPage from "./pages/AlarmaPage";
+import AlarmaCreatePage from "./pages/AlarmaCreatePage";
+import AlarmaEditPage from "./pages/AlarmaEditPage";
+import AlarmaDeletePage from "./pages/AlarmaDeletePage";
+import PerfilPage from "./pages/PerfilPage";
+import { ViewSidebar } from "@mui/icons-material";
 
 function App() {
   return (
@@ -23,9 +28,14 @@ function App() {
           <Route path="/agenda" element={<AgendaPage />} />
           <Route path="/agenda/edit" element={<AgendaEditPage />} />
           <Route path="/agenda/create" element={<AgendaCreatePage />} />
+          <Route path="/agenda/delete" element={<AgendaDeletePage />} />
           <Route path="/delete" element={<AgendaDeletePage />} />
           <Route path="/alarma" element={<AlarmaPage />} />
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/alarma/create" element={<AlarmaCreatePage />} />
+          <Route path="/alarma/edit" element={<AlarmaEditPage />} />
+          <Route path="/alarma/delete" element={<AlarmaDeletePage />} />
+          <Route path="/" element={<AgendaPage />} />
+          <Route path="/perfil" element={<PerfilPage />} />
         </Routes>
       </Router>
       <Footer />
@@ -34,3 +44,14 @@ function App() {
 }
 
 export default App;
+
+/* 
+TODO: clean Footer.js
+TODO: add images to login and setup pages
+TODO: add icon to Navbar
+TODO: clean PerfilPage
+TODO: (optional) boton cerrar sesion al finalizar Sidebar
+TODO: (optional) cambiar texto del boton de navbar
+
+
+*/

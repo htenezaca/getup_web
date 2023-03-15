@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 });
 
-const AlarmComponent = () => {
+const DaysComponent = () => {
   const classes = useStyles();
   return (
     <div
@@ -29,7 +29,7 @@ const AlarmComponent = () => {
         }}
       >
         <div className="card-body">
-          <h6 style={{ letterSpacing: "10px" }}>L M M J V S D</h6>
+          <h6 style={{ letterSpacing: "8px" }}>L M M J V S D</h6>
         </div>
         <ul className="list-group list-group-flush">
           <li
@@ -44,4 +44,4 @@ const AlarmComponent = () => {
   );
 };
 
-export default AlarmComponent;
+export default DaysComponent;

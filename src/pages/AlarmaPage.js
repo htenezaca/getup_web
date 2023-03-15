@@ -1,14 +1,13 @@
 import React from "react";
 import TitleSection from "../components/TitleSection/TitleSection";
-import CustomDatePicker from "../components/DatePicker/DatePicker";
-import EventComponent from "../components/EventComponent/EventComponent";
-import CustomTextField from "../components/TextField/TextField";
+import CustomTextField2 from "../components/TextField2/TextField2";
 import CustomTimePicker from "../components/TimePicker/TimePicker";
 import Button from "../components/ShortButton/Button";
-import CustomSelect from "../components/Select/Select";
 import { Link } from "react-router-dom";
 import LargeButton from "../components/LargeButton/LargeButton";
 import AlarmComponent from "../components/AlarmComponent/AlarmComponent";
+import AlarmOption from "../components/AlarmOption/AlarmOption";
+import DaysComponent from "../components/DaysComponent/DaysComponent";
 
 const AlarmaPage = () => {
   return (
@@ -25,9 +24,10 @@ const AlarmaPage = () => {
           }}
         >
           <AlarmComponent title="Despertar" repeat="Todos los dias" />
+
           <AlarmComponent title="Almuerzo" repeat="Lunes, Miercoles, Viernes" />
 
-          <Link to={"/larma/create"}>
+          <Link to={"/alarma/create"}>
             <LargeButton content={"Agregar Alarma"} variant={"primary"} />
           </Link>
           <br />
@@ -52,9 +52,12 @@ const AlarmaPage = () => {
             justifyContent: "center",
             alignItems: "center",
             paddingBottom: "20px",
+            flexDirection: "column",
           }}
         >
-          {/*  aqui van los elementos en una fila*/}
+          <DaysComponent style={{ paddingRight: "20px" }} />
+          <br />
+          <CustomTextField2 label={"Titulo"} placeholder={"Despertar"} />
         </div>
 
         <div
@@ -62,10 +65,41 @@ const AlarmaPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingBottom: "20px",
+            paddingBottom: "40px",
+            flexDirection: "column",
+            width: "100%", // ancho fijo del contenedor
           }}
         >
-          {/* aqui van los dos primeros switch */}
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <AlarmOption
+              cita={"Sonido de Alarma"}
+              label={"Bixby"}
+              style={{ marginRight: "30px" }}
+            />
+            <AlarmOption
+              cita={"Vibración"}
+              label={"Uniforme"}
+              style={{ marginLeft: "30px", marginRight: "30px" }}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingBottom: "5px",
+            flexDirection: "column",
+            width: "100%", // ancho fijo del contenedor
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <AlarmOption
+              cita={"Aplazar"}
+              label={"5 min, 3 veces"}
+              style={{ marginLeft: "20px", marginRight: "20px" }}
+            />
+          </div>
         </div>
         <div
           style={{
@@ -75,17 +109,7 @@ const AlarmaPage = () => {
             paddingBottom: "10px",
           }}
         >
-          {/* aqui va el ultimo switch */}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingBottom: "10px",
-          }}
-        >
-          <Link to={"/agenda/edit"} style={{ marginLeft: "10px" }}>
+          <Link to={"/alarma/edit"} style={{ marginLeft: "10px" }}>
             <Button
               content={"Edit"}
               variant={"primary"}
@@ -93,6 +117,8 @@ const AlarmaPage = () => {
             />
           </Link>
         </div>
+        <br />
+        <br />
       </div>
     </div>
   );

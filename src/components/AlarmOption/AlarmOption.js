@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Toogle from "../Toogle/Toogle";
-import { width } from "@mui/system";
 
 const useStyles = makeStyles({
   margin: {
@@ -12,23 +11,20 @@ const useStyles = makeStyles({
 const AlarmOption = ({ cita, label }) => {
   const classes = useStyles();
   return (
-    <React.Fragment>
+    <div className="container" style={{ width: "280px" }}>
       <div
-        className="container"
         style={{
           display: "flex",
+          width: "200px",
           justifyContent: "space-between",
-          width: "280px",
         }}
       >
         <div
-          className="container"
           style={{
-            width: "240px",
             borderRadius: "28px",
             display: "flex",
             alignItems: "center",
-            height: "48px", // Nueva altura
+            height: "48px",
           }}
         >
           <div className="card-body">
@@ -39,10 +35,10 @@ const AlarmOption = ({ cita, label }) => {
         </div>
         <Toogle />
       </div>
-      <div style={{ textAlign: "center", marginTop: "8px" }}>
+      <div style={{ textAlign: "left", marginTop: "8px" }}>
         <span style={{ fontWeight: "normal" }}>{label}</span>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
