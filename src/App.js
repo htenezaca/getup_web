@@ -15,13 +15,12 @@ import AlarmaCreatePage from "./pages/AlarmaCreatePage";
 import AlarmaEditPage from "./pages/AlarmaEditPage";
 import AlarmaDeletePage from "./pages/AlarmaDeletePage";
 import PerfilPage from "./pages/PerfilPage";
-import { ViewSidebar } from "@mui/icons-material";
 
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
@@ -46,12 +45,9 @@ function App() {
 export default App;
 
 /* 
-TODO: clean Footer.js
 TODO: add images to login and setup pages
 TODO: add icon to Navbar
 TODO: clean PerfilPage
 TODO: (optional) boton cerrar sesion al finalizar Sidebar
 TODO: (optional) cambiar texto del boton de navbar
-
-
 */

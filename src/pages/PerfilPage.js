@@ -5,6 +5,7 @@ import PersonalCard from "../components/PersonalCard/PersonalCard";
 import Button from "../components/ShortButton/Button";
 import ActivityPieChart from "../components/ActivityPieChart/ActivityPieChart";
 import SleepBarChart from "../components/SleepBarChart/SleepBarChart";
+import SemiCircleProgressBar from "../components/Semicircle/Semicircle";
 
 const PerfilPage = () => {
   const activityData = [
@@ -25,6 +26,7 @@ const PerfilPage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            bottom: "0",
           }}
         >
           <Link to="/login">
@@ -33,24 +35,42 @@ const PerfilPage = () => {
         </div>
       </div>
       <div style={{ flex: 1 }}>
-        <div
-          style={{
-            backgroundColor: "white",
-            width: "40%",
-            height: "50px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontWeight: "bold",
-            fontSize: "24px",
-            color: "black",
-            marginTop: "40px",
-          }}
-        >
-          Hábitos
+        <div style={{ flex: 1 }}>
+          <div
+            style={{
+              backgroundColor: "white",
+              width: "40%",
+              height: "50px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight: "bold",
+              fontSize: "24px",
+              color: "black",
+              marginTop: "40px",
+            }}
+          >
+            Hábitos
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "40px",
+              flexDirection: "column",
+            }}
+          >
+            <SemiCircleProgressBar
+              progress={85}
+              size={300}
+              strokeWidth={25}
+              circleOneStroke="#e6e6e6"
+              circleTwoStroke="#614d9e"
+            />
+            <SleepBarChart sleepHours={[7, 8, 6, 9, 8, 7, 9]} />
+          </div>
         </div>
-        <ActivityPieChart data={activityData} />
-        <SleepBarChart sleepHours={[7, 8, 6, 9, 8, 7, 9]} />
       </div>
     </div>
   );

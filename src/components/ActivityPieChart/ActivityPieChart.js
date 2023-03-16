@@ -6,9 +6,9 @@ const ActivityPieChart = ({ data }) => {
   let startAngle = 0;
 
   return (
-    <div>
-      <h2>Cantidad de Horas Dedicadas a Actividades</h2>
-      <svg viewBox="-1 -1 2 2" style={{ width: "30%" }}>
+    <div style={{ margin: "40px" }}>
+      <h5>Resumen de eventos</h5>
+      <svg viewBox="-1 -1 2 2" style={{ width: "70%" }}>
         {data.map((d, i) => {
           const endAngle = startAngle + (d.value / total) * 360;
           const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";

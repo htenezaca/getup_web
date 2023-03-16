@@ -15,15 +15,21 @@ const SleepBarChart = ({ sleepHours }) => {
     <div
       key={days[index]}
       style={{
+        display: "flex",
+        flexDirection: "column",
         height: `${height}px`,
-        width: "30px",
-        backgroundColor: "#1E88E5",
+        width: "80px",
+        backgroundColor: "#614d9e",
         margin: "0 5px",
       }}
     />
   ));
 
-  return <div style={{ display: "flex", alignItems: "flex-end" }}>{bars}</div>;
+  return (
+    <div style={{ display: "flex", alignItems: "flex-end", margin: "50px" }}>
+      {bars}
+    </div>
+  );
 };
 
 export default SleepBarChart;

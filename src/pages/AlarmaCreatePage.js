@@ -78,7 +78,7 @@ const AlarmaCreatePage = () => {
             <AlarmOption
               cita={"Sonido de Alarma"}
               label={"Bixby"}
-              style={{ marginRight: "30px" }}
+              style={{ marginRight: "00px" }}
             />
             <AlarmOption
               cita={"Vibración"}
