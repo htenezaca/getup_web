@@ -4,7 +4,6 @@ import CustomTextField2 from "../components/TextField2/TextField2";
 import CustomTimePicker from "../components/TimePicker/TimePicker";
 import Button from "../components/ShortButton/Button";
 import { Link } from "react-router-dom";
-import LargeButton from "../components/LargeButton/LargeButton";
 import AlarmComponent from "../components/AlarmComponent/AlarmComponent";
 import AlarmOption from "../components/AlarmOption/AlarmOption";
 import DaysComponent from "../components/DaysComponent/DaysComponent";
@@ -69,7 +68,7 @@ const AlarmaEditPage = () => {
             alignItems: "center",
             paddingBottom: "40px",
             flexDirection: "column",
-            width: "100%", // ancho fijo del contenedor
+            width: "100%",
           }}
         >
           <div style={{ display: "flex", flexDirection: "row" }}>

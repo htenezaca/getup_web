@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
@@ -46,8 +45,4 @@ export default App;
 
 /* 
 TODO: add images to login and setup pages
-TODO: add icon to Navbar
-TODO: clean PerfilPage
-TODO: (optional) boton cerrar sesion al finalizar Sidebar
-TODO: (optional) cambiar texto del boton de navbar
 */

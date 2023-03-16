@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SignUpForm.css";
 
 const SignUpForm = () => {
@@ -59,14 +60,19 @@ const SignUpForm = () => {
             Aceptar los términos y condiciones
           </label>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Registrar
-        </button>
-        <div className="mb-3">
+        <Link to="/agenda">
           <button type="submit" className="btn btn-primary">
-            Iniciar sesión con Google
+            Registrar
           </button>
-        </div>
+        </Link>
+
+        <Link to="/agenda">
+          <div className="mb-3">
+            <button type="submit" className="btn btn-primary">
+              Iniciar sesión con Google
+            </button>
+          </div>
+        </Link>
       </form>
     </div>
   );

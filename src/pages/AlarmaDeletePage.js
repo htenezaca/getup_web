@@ -15,7 +15,6 @@ const AlarmaDeletePage = () => {
     <div style={{ display: "flex", paddingTop: "60px" }}>
       <div style={{ width: "325px" }}>
         <TitleSection title="Alarmas" />
-        {/* Generar una lista para colocar componentes flex */}
         <div
           style={{
             display: "flex",

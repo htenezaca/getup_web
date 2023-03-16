@@ -27,13 +27,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav me-auto">
             <div
-              style={{
-                width: "45px",
-                height: "45px",
-                borderRadius: "50%",
-                backgroundColor: "black",
-              }}
-            ></div>
+              className="nav-link active"
+              aria-current="page"
+              href="#"
+              style={{ width: "150px", textAlign: "center" }}
+            >
+              <img src="bell_icon.png" height={30} width={30} />
+            </div>
           </div>
           <div className="navbar-nav mx-auto">
             <a

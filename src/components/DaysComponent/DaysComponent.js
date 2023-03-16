@@ -25,7 +25,7 @@ const DaysComponent = () => {
         style={{
           width: "282px",
           background: "#BAA6ED",
-          opacity: "0.4",
+          opacity: "0.9",
         }}
       >
         <div className="card-body">
@@ -34,7 +34,11 @@ const DaysComponent = () => {
         <ul className="list-group list-group-flush">
           <li
             className="list-group-item"
-            style={{ background: "#BAA6ED", borderRadius: "28px" }}
+            style={{
+              background: "#BAA6ED",
+              borderRadius: "28px",
+              color: "black",
+            }}
           >
             <h6>Todos los días</h6>
           </li>

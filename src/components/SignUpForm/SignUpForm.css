@@ -5,6 +5,8 @@
     background-color: #BAA6ED;
     border-radius: 28px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-width: 2px;
+    border-color: #614d9e;
     }
     
     .signup-form label {

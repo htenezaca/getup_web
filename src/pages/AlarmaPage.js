@@ -67,7 +67,7 @@ const AlarmaPage = () => {
             alignItems: "center",
             paddingBottom: "40px",
             flexDirection: "column",
-            width: "100%", // ancho fijo del contenedor
+            width: "100%",
           }}
         >
           <div style={{ display: "flex", flexDirection: "row" }}>
@@ -90,7 +90,7 @@ const AlarmaPage = () => {
             alignItems: "center",
             paddingBottom: "5px",
             flexDirection: "column",
-            width: "100%", // ancho fijo del contenedor
+            width: "100%",
           }}
         >
           <div style={{ display: "flex", flexDirection: "row" }}>

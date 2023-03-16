@@ -3,7 +3,6 @@ import TitleSection from "../components/TitleSection/TitleSection";
 import { Link } from "react-router-dom";
 import PersonalCard from "../components/PersonalCard/PersonalCard";
 import Button from "../components/ShortButton/Button";
-import ActivityPieChart from "../components/ActivityPieChart/ActivityPieChart";
 import SleepBarChart from "../components/SleepBarChart/SleepBarChart";
 import SemiCircleProgressBar from "../components/Semicircle/Semicircle";
 
@@ -19,8 +18,6 @@ const PerfilPage = () => {
         <TitleSection title="Perfil" />
         <br />
         <PersonalCard name={"Juan Perez"} email={"juanperez@mail.com"} />
-
-        {/* Al final colocar un boton y centrarlo */}
         <div
           style={{
             display: "flex",
